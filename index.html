@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Im so sorry huhuhu </title>
+        <style>
+            body {
+                text-align: center;
+                font-family: 'Times New Roman', 'Century';
+                background: #ffcccc;
+                background-image: url('flower.gif');
+                background-size: 200px 200px;
+                background-position: center;
+                overflow: hidden;
+                position: relative;
+            }
+            .love-message {
+                font-size: 50px;
+                margin-bottom: 20px;
+            }
+            .btn {
+                padding: 10px 20px;
+                margin: 10px;
+                cursor: pointer;
+                border-radius: 5px;
+            }
+            #yesBtn {
+                background-color: #4CAF50;
+                color: white;
+            }
+            #noBtn {
+                background-color: brown;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="love-message">
+            <p> Maafin aku yaaa huhuhuuuu</p>
+            <button class="btn" id="yesBtn">Iya, aku maafin hihihi</button>
+            <button class="btn" id="noBtn">Iyaaaa, aku maafin lopyuuuu</button>
+        </div>
+        <script>
+        const loveMessage = document.querySelector('.love-message');
+        const yesButton = document.getElementById('yesBtn');
+        const noButton = document.getElementById('noBtn');
+
+        yesButton.addEventListener('click', function(){
+            loveMessage.innerHTML = "<p> Terima kasihh ayaangg, lopyuuu</p>";
+            yesButton.style.display = 'none';
+            noButton.style.display = 'none';
+        });
+
+        noButton.addEventListener('click', function() {
+            loveMessage.innerHTML = "<p> Miss uuuuuu huhuhuhu. </p>";
+            loveMessage.style.color = 'Black';
+            loveMessage.fontSive = '20px';
+            yesButton.style.position = 'absolute';
+            yesButton.style.left = Math.random() * 80 + "vw";
+            yesButton.style.top = Math.random() * 80 + "vh";
+        });
+    </script>
+</body>
+</html>
